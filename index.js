@@ -1,4 +1,4 @@
-console.log('✅ㅤIniciando...')
+console.log('✅ㅤIniciando nixi-server...')
 import { join, dirname } from 'path'
 import { createRequire } from "module";
 import { fileURLToPath } from 'url'
@@ -13,7 +13,7 @@ const { name, author } = require(join(__dirname, './package.json'))
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('Mystic - Bot\nWhatsApp Bot MD', {
+say('Mystic - Nixi\nSystem-V3.5 MD', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
@@ -54,7 +54,7 @@ p.send(process.uptime())
 break }})
 p.on('exit', (_, code) => {
 isRunning = false
-console.error('❎ㅤOcurrio un error inesperado:', code)
+console.error('❎ㅤOcurrio un error inesperado en el servidor Max:', code)
 if (code === 0) return
 watchFile(args[0], () => {
 unwatchFile(args[0])
