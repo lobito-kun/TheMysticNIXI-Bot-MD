@@ -16,7 +16,7 @@ global.owner = [
   ['99999999999']
 ] // Cambia los numeros que quieras
 global.mods = [] 
-global.prems = [] 
+global.prems = ['5493704583368', '5493436617283'] 
 global.APIs = { // API Prefix
   // name: 'https://website'
   amel: 'https://melcanz.com',
