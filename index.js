@@ -17,7 +17,7 @@ say('Mystic - Nixi\nSystem-V3.5 MD', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Bot creado por Bruno Sobrino`, {
+say(`created by Mx`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
