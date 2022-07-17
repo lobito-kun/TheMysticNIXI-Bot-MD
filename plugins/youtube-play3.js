@@ -1,4 +1,4 @@
-import { youtubeSearch } from '@bochilteam/scraper'
+/*import { youtubeSearch } from '@bochilteam/scraper'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} Good Feeling - Flo Rida*`
 let vid = (await youtubeSearch(text)).video[0]
@@ -23,4 +23,31 @@ m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰�
 console.log(e)
 }}
 handler.command = /^play3|playdoc?$/i
+export default handler
+*/
+
+
+import { youtubeSearch } from '@bochilteam/scraper'
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+  if (!text) throw `Use example ${usedPrefix}${command} Minecraft`
+  let vid = (await youtubeSearch(text)).video[0]
+  if (!vid) throw 'Video/Audio Not found'
+  let { title, description, thumbnail, videoId, durationH } = vid
+  const url = 'https://www.youtube.com/watch?v=' + videoId
+  await conn.sendHydrated(m.chat, `
+🌎 *𝗧𝗜𝗧𝗟𝗘:* ${title}
+🌍 *𝗨𝗥𝗟:* ${url}
+🌞 *𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡:* ${description}
+  `.trim(), author, thumbnail, '', '', null, null, [
+    ['SONG', `${usedPrefix}yta ${url} yes`],
+    ['VIDEO', `${usedPrefix}ytv ${url} yes`]
+  ], m, { asLocation: 1 })
+}
+handler.help = ['play', 'play3'].map(v => v + '')
+handler.tags = ['downloader']
+handler.command = /^play3?$/i
+
+handler.exp = 0
+
+
 export default handler
