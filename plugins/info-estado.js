@@ -11,8 +11,9 @@ let estado =`
 ╭─[ *NIXI SERVER - 𝐁𝐨𝐭 v3.5* ]
 │ *➤ 𝙷𝙾𝙻𝙰 ${name}*
 │
-│ *ミ🤖 𝙴𝚂𝚃𝙰𝙳𝙾 𝙳𝙴𝙻 SERVIDOR🤖彡*
-│ *=> 𝙱𝙾𝚃 𝙰𝙲𝚃𝙸𝚅𝙾 ✅*
+│ *ミ🤖 𝙴𝚂𝚃𝙰𝙳𝙾 𝙳𝙴𝙻 SERVIDOR 🤖彡*
+│ *=> NixiSYSTEM 𝙰𝙲𝚃𝙸𝚅𝙾 ✅*
+│ *=> NixiSERVER 𝙰𝙲𝚃𝙸𝚅𝙾 ✅*
 │ *=> 𝙱𝙾𝚃 𝙳𝙴 𝚄𝚂𝙾 PERSONAL POR MX ✅*
 │ *=> 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾: ${uptime}*
 ╰───────────────
