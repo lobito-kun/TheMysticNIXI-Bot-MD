@@ -1,4 +1,4 @@
-/*let handler = async (m, { conn, command, usedPrefix }) => {
+let handler = async (m, { conn, command, usedPrefix }) => {
 let picture = './Menu2.jpg'
 let name = await conn.getName(m.sender)
 let _uptime = process.uptime() * 1000
@@ -17,6 +17,10 @@ let estado =`
 │ *=> 𝙱𝙾𝚃 𝙳𝙴 𝚄𝚂𝙾 PERSONAL POR MX ✅*
 │ *=> 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾: ${uptime}*
 ╰───────────────
+*≡  NodeJS Uso de memoria*
+${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
+`
+
 `.trim()
 
 conn.sendHydrated(m.chat, estado, wm, picture, 'https://github.com/lobito-kun/TheMysticNIXI-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
@@ -32,9 +36,11 @@ function clockString(ms) {
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}*/
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
 
-import { cpus as _cpus, totalmem, freemem } from 'os'
+
+
+/*import { cpus as _cpus, totalmem, freemem } from 'os'
 import util from 'util'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
@@ -100,4 +106,4 @@ conn.sendHydrated(m.chat, infobt, igfg, '', 'https://github.com/FG98F/dylux-fg',
 handler.help = ['Info']
 handler.tags = ['main']
 handler.command = ['info', 'infobot', 'botinfo']
-export default handler
+export default handler*/
