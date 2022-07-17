@@ -17,10 +17,6 @@ let estado =`
 │ *=> 𝙱𝙾𝚃 𝙳𝙴 𝚄𝚂𝙾 PERSONAL POR MX ✅*
 │ *=> 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾: ${uptime}*
 ╰───────────────
-*≡  NodeJS Uso de memoria*
-${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
-`
-
 `.trim()
 
 conn.sendHydrated(m.chat, estado, wm, picture, 'https://github.com/lobito-kun/TheMysticNIXI-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
